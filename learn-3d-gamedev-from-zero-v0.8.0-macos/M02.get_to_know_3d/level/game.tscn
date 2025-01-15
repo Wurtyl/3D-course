@@ -78,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 visibility_aabb = AABB(-20, -5, -20, 40, 10, 40)
 
 [node name="Player3D" parent="." instance=ExtResource("4_i8755")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -17)
+transform = Transform3D(1, 0.000282287, -0.000175699, -0.000282263, 1, 0.00015423, 0.000175738, -0.000154186, 1, -6, 0, -17)
 camera_controller_scene = ExtResource("5_70eiy")
 skin_scene = ExtResource("6_dbliw")
 shoot_cooldown = 0.3
