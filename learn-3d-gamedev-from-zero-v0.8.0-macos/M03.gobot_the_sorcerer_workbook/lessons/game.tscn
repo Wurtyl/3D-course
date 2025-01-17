@@ -1,6 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dih2xcu6qewuf"]
+[gd_scene load_steps=5 format=3 uid="uid://dih2xcu6qewuf"]
 
 [ext_resource type="PackedScene" uid="uid://d2u6wjiucn24q" path="res://lessons/player_3d.tscn" id="1_gm5m2"]
+[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://assets/level/checkboard.png" id="1_w2wby"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t62kh"]
+albedo_color = Color(0.785641, 0.785641, 0.785641, 1)
+albedo_texture = ExtResource("1_w2wby")
+uv1_triplanar = true
 
 [sub_resource type="Environment" id="Environment_vujrr"]
 background_mode = 1
@@ -19,6 +25,7 @@ fog_height_density = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
 use_collision = true
 size = Vector3(10, 8, 10)
+material = SubResource("StandardMaterial3D_t62kh")
 
 [node name="Player3D" parent="." instance=ExtResource("1_gm5m2")]
 
