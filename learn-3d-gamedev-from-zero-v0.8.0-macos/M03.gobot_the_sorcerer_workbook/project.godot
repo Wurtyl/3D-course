@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.3")
 run/max_fps=60
 config/icon="res://icon.png"
 
+[autoload]
+
+UITestPanel="*res://addons/gdpractice/tester/ui_test_panel.tscn"
+Metadata="*res://addons/gdpractice/practice_solutions/metadata.gd"
+
 [debug]
 
 gdscript/warnings/return_value_discarded=false
@@ -31,6 +36,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdpractice/plugin.cfg")
 
 [filesystem]
 
