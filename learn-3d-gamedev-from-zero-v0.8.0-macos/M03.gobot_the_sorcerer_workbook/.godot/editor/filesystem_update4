@@ -1,3 +1,3 @@
-res://practices/L5.P2/move_item_to_mouse.tscn
+res://practices/L5.P3/instantiate_on_click.tscn
 res://addons/gdpractice/assets/theme.tres
-res://practices/L5.P2/move_item_to_mouse.gd
+res://practices/L5.P3/instantiate_on_click.gd
