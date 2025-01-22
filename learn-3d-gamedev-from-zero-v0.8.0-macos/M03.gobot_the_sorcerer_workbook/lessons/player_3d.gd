@@ -1,4 +1,6 @@
 extends CharacterBody3D
+var _ground_plane := Plane(Vector3.UP)
+@onready var _camera_3d: Camera3D = %Camera3D
 @onready var _gobot_skin_3d: GobotSkin3D = %GobotSkin3D
 @export_range(3.0, 12.0, 0.1) var max_speed := 6.0
 @export_range(1.0, 50.0, 0.1) var steering_factor := 20.0
@@ -18,3 +20,12 @@ func _physics_process(delta: float) -> void:
 		_gobot_skin_3d.run()
 	else:
 		_gobot_skin_3d.idle()
+	_ground_plane.d = global_position.y
+	var mouse_position_2d := get_viewport().get_mouse_position()
+	var mouse_ray := _camera_3d.project_ray_normal(mouse_position_2d)
+	var world_mouse_position: Variant = _ground_plane.intersects_ray(_camera_3d.global_position, mouse_ray)
+	if world_mouse_position != null:
+		_gobot_skin_3d.look_at(world_mouse_position)
+	if input_vector.length() > 0.0:
+		var skin_forward_vector := -1.0 * _gobot_skin_3d.global_basis.z
+		_gobot_skin_3d.hips_rotation = skin_forward_vector.signed_angle_to(direction, Vector3.UP)

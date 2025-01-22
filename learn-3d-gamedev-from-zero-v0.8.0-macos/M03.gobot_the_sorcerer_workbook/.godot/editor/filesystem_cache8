@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737152593
+::res://::1737578656
 icon.png::CompressedTexture2D::3920665917793430229::1736976031::1736976168::1::::<><>::
 ::res://addons/::1736976031
 ::res://addons/gdpractice/::1736976031
@@ -248,9 +248,10 @@ outer_smoke.tres::ShaderMaterial::6133779181506885685::1736976031::0::1::::<><>:
 stars.gdshader::Shader::-1::1736976031::0::1::::<><>::
 star_icon.png::CompressedTexture2D::8872180076739522440::1736976031::1736976168::1::::<><>::
 star_trail.gdshader::Shader::-1::1736976031::0::1::::<><>::
-::res://lessons/::1736977552
-game.tscn::PackedScene::7736904013899339269::1736977552::0::1::::<><>::uid://d2u6wjiucn24q::::res://lessons/player_3d.tscn
-player_3d.tscn::PackedScene::9097570384609552094::1736977541::0::1::::<><>::uid://cy36aygvs66pn::::res://assets/skins/gobot/gobot_skin_3d.tscn
+::res://lessons/::1737155308
+game.tscn::PackedScene::7736904013899339269::1737155220::0::1::::<><>::uid://d2u6wjiucn24q::::res://lessons/player_3d.tscn<>uid://brbtohct73mlt::::res://assets/level/checkboard.png
+player_3d.gd::GDScript::-1::1737155220::0::1::::<>CharacterBody3D<>::
+player_3d.tscn::PackedScene::9097570384609552094::1737155308::0::1::::<><>::uid://cy36aygvs66pn::::res://assets/skins/gobot/gobot_skin_3d.tscn<>res://lessons/player_3d.gd
 ::res://practices/::1736976031
 ::res://practices/L5.P1/::1736976031
 look_at_the_mouse.gd::GDScript::-1::1736976031::0::1::::<>Node3D<>::
