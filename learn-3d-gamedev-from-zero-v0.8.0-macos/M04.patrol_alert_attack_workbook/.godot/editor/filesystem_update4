@@ -1,5 +1,4 @@
 res://lessons/mobs/mob_dummy.tscn
 res://assets/vfx/ice_spikes/materials/frost_mat.tres
-res://lessons/level.tscn
 res://lessons/mobs/mob_dummy.gd
-res://assets/entities/projectile/projectile_3d.gd
+res://lessons/level.tscn
