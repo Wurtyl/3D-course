@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737155348
+::res://::1738020231
 icon.png::CompressedTexture2D::3920665917793430229::1736976031::1737155349::1::::<><>::
 ::res://addons/::1736976031
 ::res://addons/gdquest_3d_math_visualizer/::1736976031
@@ -14,7 +14,7 @@ vector_3d.gd::GDScript::-1::1736976031::0::1::::Vector3D<>Node3D<>::
 colorpicker_presets.gd::GDScript::-1::1736976031::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1736976031::0::1::::<><>::
 README.md::TextFile::-1::1736976031::0::1::::<><>::
-::res://addons/wigglebone/::1736976031
+::res://addons/wigglebone/::1737155349
 icon.svg::CompressedTexture2D::1161637783966111517::1736976031::1737155349::1::::<><>::
 plugin.cfg::TextFile::-1::1736976031::0::1::::<><>::
 plugin.gd::GDScript::-1::1736976031::0::1::::<>EditorPlugin<>::
@@ -23,16 +23,16 @@ wiggle_gizmo_plugin.gd::GDScript::-1::1736976031::0::1::::<>EditorNode3DGizmoPlu
 wiggle_properties.gd::GDScript::-1::1736976031::0::1::::WiggleProperties<>Resource<>::
 ::res://assets/::1736976031
 background.tscn::PackedScene::3406276852349458060::1736976031::0::1::::<><>::uid://brbtohct73mlt::::res://assets/level/checkboard.png
-::res://assets/fonts/::1736976031
+::res://assets/fonts/::1737155349
 Inter-Bold.ttf::FontFile::5958031395052463210::1736976031::1737155349::1::::<><>::
-::res://assets/icons/::1736976031
+::res://assets/icons/::1737155349
 border_icon.png::CompressedTexture2D::5226261170526584214::1736976031::1737155349::1::::<><>::
 fire_ball_icon.png::CompressedTexture2D::6732956268839868185::1736976031::1737155349::1::::<><>::
 hit_box_3d.svg::CompressedTexture2D::2382544832786128631::1736976031::1737155349::1::::<><>::
 hurt_box_3d.svg::CompressedTexture2D::6666729679661117155::1736976031::1737155349::1::::<><>::
 ice_spikes_icon.png::CompressedTexture2D::7847833199732000029::1736976031::1737155349::1::::<><>::
 skull_icon.png::CompressedTexture2D::8298612014760964626::1736976031::1737155349::1::::<><>::
-::res://assets/level/::1736976031
+::res://assets/level/::1737155349
 checkboard.png::CompressedTexture2D::3582874398931153145::1736976031::1737155349::1::::<><>::
 ::res://assets/shaders/::1736976031
 fresnel.gdshaderinc::ShaderInclude::-1::1736976031::0::1::::<><>::
@@ -43,7 +43,7 @@ rotate_z.gdshaderinc::ShaderInclude::-1::1736976031::0::1::::<><>::
 screen_shader.gdshader::Shader::-1::1736976031::0::1::::<><>::
 voronoi.gdshaderinc::ShaderInclude::-1::1736976031::0::1::::<><>::
 ::res://assets/skins/::1736976031
-::res://assets/skins/dummy/::1736976031
+::res://assets/skins/dummy/::1737155349
 dummy.gdshader::Shader::-1::1736976031::0::1::::<><>::
 dummy.glb::PackedScene::1834983117054316381::1736976031::1737155349::1::::<><>::uid://bi0o8ccvuiej4::::res://assets/skins/dummy/dummy_diffuse.png<>uid://dv0sajpiuwfv7::::res://assets/skins/dummy/dummy_roughness.png<>uid://dun4w5y08xrn3::::res://assets/skins/dummy/dummy_normal.png
 dummy_diffuse.png::CompressedTexture2D::3000449954863945727::1736976031::1737155349::1::::<><>::
@@ -55,7 +55,7 @@ dummy_skin_3d.tscn::PackedScene::7389294123253476989::1736976031::0::1::::<><>::
 ::res://assets/skins/gobot/::1736976031
 gobot_skin_3d.gd::GDScript::-1::1736976031::0::1::::GobotSkin3D<>Node3D<>::
 gobot_skin_3d.tscn::PackedScene::6517059689397096127::1736976031::0::1::::<><>::res://assets/skins/gobot/gobot_skin_3d.gd<>uid://kod0awm1ha4o::::res://assets/skins/gobot/model/gobot.glb<>uid://cujalyga580eq::::res://assets/skins/gobot/materials/gobot_mat.tres<>uid://div0enqs04w5j::::res://assets/skins/gobot/materials/eye_mat.tres<>uid://k45w5evgjbtp::::res://assets/skins/gobot/model/custom/custom_lib.res<>uid://cpxlfujoy8ppl::::res://assets/skins/gobot/model/plastic_wand.glb<>res://assets/skins/gobot/materials/plastic_wand.gdshader<>res://assets/skins/gobot/materials/magic_sparks_particles.gdshader<>uid://dljbapykdurtf::::res://assets/skins/gobot/materials/spark.png<>uid://dtqjiw28k8wpt::::res://assets/skins/gobot/model/witch_hat.glb<>uid://dux0o32bwi83::::res://assets/skins/gobot/materials/hat_mat.tres<>res://addons/wigglebone/wiggle_bone.gd<>res://addons/wigglebone/wiggle_properties.gd<>res://assets/skins/gobot/materials/cape.gdshader<>uid://xwl0c1eijtvm::::res://assets/skins/gobot/model/cape.glb
-::res://assets/skins/gobot/materials/::1736976031
+::res://assets/skins/gobot/materials/::1737155349
 cape.gdshader::Shader::-1::1736976031::0::1::::<><>::
 character_shader.gdshader::Shader::-1::1736976031::0::1::::<><>::
 eye_mat.tres::StandardMaterial3D::7765650509386433557::1736976031::0::1::::<><>::uid://dq675fmt1rg8c::::res://assets/skins/gobot/textures/open_eye.png
@@ -65,7 +65,7 @@ magic_sparks_particles.gdshader::Shader::-1::1736976031::0::1::::<><>::
 plastic_wand.gdshader::Shader::-1::1736976031::0::1::::<><>::
 spark.png::CompressedTexture2D::7949980273261691615::1736976031::1737155349::1::::<><>::
 witch_hat.gdshader::Shader::-1::1736976031::0::1::::<><>::
-::res://assets/skins/gobot/model/::1736976031
+::res://assets/skins/gobot/model/::1737155350
 cape.glb::PackedScene::1660472391436537322::1736976031::1737155349::1::::<><>::
 gobot.glb::PackedScene::731016555329025600::1736976031::1737155349::1::::<><>::
 gobot_gobot_diffuse.png::CompressedTexture2D::3782835701294553970::1736976031::1737155349::1::::<><>::
@@ -81,11 +81,11 @@ woodwand.obj::Mesh::5211044140404780255::1736976031::1737155349::1::::<><>::
 custom_lib.res::AnimationLibrary::763617771339198433::1736976031::0::1::::<><>::uid://c4s3bebvtgey4::::res://player/skin_gobot/model/custom/run_step.res
 hurt.res::Animation::1002193859794753742::1736976031::0::1::::<><>::uid://yj5yx07nva6l::::res://player/skin_gobot/textures/hurt_eyes.png<>uid://dq675fmt1rg8c::::res://player/skin_gobot/textures/open_eye.png
 run_step.res::Animation::6847178706671563677::1736976031::0::1::::<><>::
-::res://assets/skins/gobot/textures/::1736976031
+::res://assets/skins/gobot/textures/::1737155349
 closed_eyes.png::CompressedTexture2D::5130339085040898258::1736976031::1737155349::1::::<><>::
 hurt_eyes.png::CompressedTexture2D::1704977264065322721::1736976031::1737155349::1::::<><>::
 open_eye.png::CompressedTexture2D::8348276059302445828::1736976031::1737155349::1::::<><>::
-::res://assets/sounds/::1736976031
+::res://assets/sounds/::1737155349
 boop_1.wav::AudioStreamWAV::4614082512942926544::1736976031::1737155349::1::::<><>::
 kick_3.ogg::AudioStreamOggVorbis::5158243995070168288::1736976031::1737155349::1::::<><>::
 poof_1.wav::AudioStreamWAV::1548670263002681036::1736976031::1737155349::1::::<><>::
@@ -95,7 +95,7 @@ small_gunshot.mp3::AudioStreamMP3::7950333928033899329::1736976031::1737155349::
 squeak toy - squeak1.wav::AudioStreamWAV::492842447307259858::1736976031::1737155349::1::::<><>::
 ::res://assets/vfx/::1736976031
 projectile_skin_3d.gd::GDScript::-1::1736976031::0::1::::ProjectileSkin3D<>Node3D<>::
-::res://assets/vfx/fireball/::1736976031
+::res://assets/vfx/fireball/::1737155349
 fireball.gd::GDScript::-1::1736976031::0::1::::<>ProjectileSkin3D<>::
 fireball.gdshader::Shader::-1::1736976031::0::1::::<><>::
 fireball.glb::PackedScene::5101806130535050743::1736976031::1737155349::1::::<><>::
@@ -104,11 +104,11 @@ fireball_emission.tscn::PackedScene::7323223824059086575::1736976031::0::1::::<>
 fireball_impact.tscn::PackedScene::1954541905163135589::1736976031::0::1::::<><>::res://assets/vfx/fireball/fireball_particles.gdshader<>res://assets/vfx/fireball/impact/ember.gdshader<>uid://cacm3my5rnyaf::::res://assets/vfx/fireball/impact/spark.png<>uid://bai1togqfuxr::::res://assets/vfx/fireball/impact/flash_impact.png
 fireball_mat.tres::ShaderMaterial::2789381961040373233::1736976031::0::1::::<><>::res://assets/vfx/fireball/fireball.gdshader
 fireball_particles.gdshader::Shader::-1::1736976031::0::1::::<><>::
-::res://assets/vfx/fireball/impact/::1736976031
+::res://assets/vfx/fireball/impact/::1737155349
 ember.gdshader::Shader::-1::1736976031::0::1::::<><>::
 flash_impact.png::CompressedTexture2D::70722030086820311::1736976031::1737155349::1::::<><>::
 spark.png::CompressedTexture2D::4777749397778683165::1736976031::1737155349::1::::<><>::
-::res://assets/vfx/ice_spikes/::1736976031
+::res://assets/vfx/ice_spikes/::1737155349
 ice_shards.gdshader::Shader::-1::1736976031::0::1::::<><>::
 ice_shards_process.gdshader::Shader::-1::1736976031::0::1::::<><>::
 ice_spike.obj::Mesh::6567416371113513966::1736976031::1737155349::1::::<><>::
@@ -123,12 +123,12 @@ ice_spikes.gdshader::Shader::-1::1736976031::0::1::::<><>::
 ice_spikes_mat.tres::ShaderMaterial::456273961731409171::1736976031::0::1::::<><>::res://assets/vfx/ice_spikes/materials/ice_spikes.gdshader
 ice_spikes_process.gdshader::Shader::-1::1736976031::0::1::::<><>::
 ice_spikes_process_mat.tres::ShaderMaterial::6962329970462724275::1736976031::0::1::::<><>::res://assets/vfx/ice_spikes/materials/ice_spikes_process.gdshader
-::res://assets/vfx/smoke_vfx/::1736976031
+::res://assets/vfx/smoke_vfx/::1737155349
 default.res::Animation::821507829150262441::1736976031::0::1::::<><>::
 smoke_explosion.gd::GDScript::-1::1736976031::0::1::::<>Node3D<>::
 smoke_explosion.tscn::PackedScene::4168529298847383674::1736976031::0::1::::<><>::res://assets/vfx/smoke_vfx/smoke_explosion.gd<>uid://ctnipgxo3l72h::::res://assets/vfx/smoke_vfx/materials/outer_smoke.tres<>res://assets/vfx/smoke_vfx/materials/stars.gdshader<>uid://dyn0rlegpkah1::::res://assets/vfx/smoke_vfx/materials/star_icon.png<>uid://q7bgkpw4dxp5::::res://assets/vfx/smoke_vfx/smoke_sphere.obj<>res://assets/vfx/smoke_vfx/materials/star_trail.gdshader<>uid://dr7gyunhpjiwf::::res://assets/vfx/smoke_vfx/materials/inner_smoke.tres<>uid://lx7d4xuqn314::::res://assets/vfx/smoke_vfx/default.res<>uid://wcgmxfexvlrg::::res://assets/sounds/poof_1.wav
 smoke_sphere.obj::Mesh::1189153567538672608::1736976031::1737155349::1::::<><>::
-::res://assets/vfx/smoke_vfx/materials/::1736976031
+::res://assets/vfx/smoke_vfx/materials/::1737155349
 inner_smoke.gdshader::Shader::-1::1736976031::0::1::::<><>::
 inner_smoke.tres::ShaderMaterial::8418940712953999849::1736976031::0::1::::<><>::res://assets/vfx/smoke_vfx/materials/inner_smoke.gdshader
 outer_smoke.gdshader::Shader::-1::1736976031::0::1::::<><>::
@@ -139,9 +139,9 @@ star_trail.gdshader::Shader::-1::1736976031::0::1::::<><>::
 ::res://lessons_reference/::1736976031
 ::res://lessons_reference/010_movement/::1736976031
 level_010.tscn::PackedScene::7089324782087261289::1736976031::0::1::::<><>::uid://xie4psnedowh::::res://lessons_reference/010_movement/player/player_010.tscn<>uid://brbtohct73mlt::::res://assets/level/checkboard.png
-::res://lessons_reference/010_movement/player/::1736976031
+::res://lessons_reference/010_movement/player/::1737155498
 player_010.gd::GDScript::-1::1736976031::0::1::::<>CharacterBody3D<>::
-player_010.tscn::PackedScene::1631153897954403235::1736976031::0::1::::<><>::res://lessons_reference/010_movement/player/player_010.gd<>uid://cy36aygvs66pn::::res://assets/skins/gobot/gobot_skin_3d.tscn
+player_010.tscn::PackedScene::1631153897954403235::1737155498::0::1::::<><>::res://lessons_reference/010_movement/player/player_010.gd<>uid://cy36aygvs66pn::::res://assets/skins/gobot/gobot_skin_3d.tscn
 ::res://lessons_reference/020_weapon/::1736976031
 level_020.tscn::PackedScene::5473355796841655994::1736976031::0::1::::<><>::uid://c3n4mtmmtnulv::::res://lessons_reference/020_weapon/player/player_020.tscn<>uid://brbtohct73mlt::::res://assets/level/checkboard.png
 ::res://lessons_reference/020_weapon/mobs/::1736976031
@@ -168,7 +168,7 @@ player_3d.gd::GDScript::-1::1736976031::0::1::::Player3D<>CharacterBody3D<>::
 player_3d.tscn::PackedScene::2540768836497901519::1736976031::0::1::::<><>::res://lessons_reference/030_damage/player/player_3d.gd<>uid://b0njclhg1d1go::::res://assets/vfx/smoke_vfx/smoke_explosion.tscn<>uid://cy36aygvs66pn::::res://assets/skins/gobot/gobot_skin_3d.tscn<>uid://6asfjx5e15q4::::res://lessons_reference/030_damage/player/wand.tscn<>uid://wawlsqcberu6::::res://lessons_reference/030_damage/projectile/projectile_3d.tscn
 wand.gd::GDScript::-1::1736976031::0::1::::<>Node3D<>::
 wand.tscn::PackedScene::2176956497228442821::1736976031::0::1::::<><>::res://lessons_reference/030_damage/player/wand.gd
-::res://lessons_reference/030_damage/player/health_bar/::1736976031
+::res://lessons_reference/030_damage/player/health_bar/::1737155349
 bar_bg_ninepatch.png::CompressedTexture2D::3425905742855332067::1736976031::1737155349::1::::<><>::
 health_bar_ui.gd::GDScript::-1::1736976031::0::1::::HealthBarUI<>Control<>::
 health_bar_ui.tscn::PackedScene::4923451377360687059::1736976031::0::1::::<><>::uid://bo2sfxd46ihbv::::res://lessons_reference/030_damage/player/health_bar/bar_bg_ninepatch.png<>res://lessons_reference/030_damage/player/health_bar/health_bar_ui.gd

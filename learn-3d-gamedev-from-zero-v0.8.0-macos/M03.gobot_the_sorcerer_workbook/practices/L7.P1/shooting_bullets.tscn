@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="PackedScene" path="res://assets/background.tscn" id="1_tihi6"]
-[ext_resource type="PackedScene" path="res://practices/L7.P1/machine_gun.tscn" id="2_0p6jy"]
-[ext_resource type="Script" path="res://practices/L7.P1/machine_gun.gd" id="3_5b100"]
-[ext_resource type="PackedScene" path="res://practices/L7.P1/bullet.tscn" id="4_22n48"]
+[ext_resource type="PackedScene" path="res://practices/L7.P1/machine_gun.tscn" id="2_lldpe"]
+[ext_resource type="Script" path="res://practices/L7.P1/machine_gun.gd" id="3_yl6os"]
 
 [node name="ProjectileMovement" type="Node3D"]
 
@@ -22,10 +21,6 @@ size = 12.555
 near = 15.0
 far = 100.0
 
-[node name="MachineGun" type="Marker3D" parent="." instance=ExtResource("2_0p6jy")]
+[node name="MachineGun" type="Marker3D" parent="." instance=ExtResource("2_lldpe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
-script = ExtResource("3_5b100")
-bullet_scene = ExtResource("4_22n48")
-max_range = 12.0
-max_bullet_speed = 25.0
-fire_rate = 3.0
+script = ExtResource("3_yl6os")
