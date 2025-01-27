@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://xtfdiamjuki2"]
+
+[ext_resource type="Script" path="res://lessons/wand.gd" id="1_36vur"]
+[ext_resource type="PackedScene" uid="uid://cxd4jlc510w6s" path="res://lessons/projectile_3d.tscn" id="2_67f3u"]
+
+[node name="Wand" type="Marker3D"]
+script = ExtResource("1_36vur")
+projectile_scene = ExtResource("2_67f3u")
+fire_rate = 5.0
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
