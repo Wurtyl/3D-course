@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxd4jlc510w6s"]
+
+[ext_resource type="Script" path="res://lessons/projectile_3d.gd" id="1_booye"]
+[ext_resource type="PackedScene" uid="uid://caxbqhwe5nxb3" path="res://assets/vfx/fireball/fireball.tscn" id="2_u2bpe"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lr57j"]
+
+[node name="Projectile3D" type="Area3D"]
+script = ExtResource("1_booye")
+projectile_vfx = ExtResource("2_u2bpe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_lr57j")

@@ -1,3 +1,5 @@
-res://practices/L5.P3/instantiate_on_click.tscn
+res://lessons/projectile_3d.tscn
 res://addons/gdpractice/assets/theme.tres
-res://practices/L5.P3/instantiate_on_click.gd
+res://lessons/projectile_3d.gd
+res://lessons/game.tscn
+res://assets/vfx/fireball/fireball.tscn

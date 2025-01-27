@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dih2xcu6qewuf"]
+[gd_scene load_steps=6 format=3 uid="uid://dih2xcu6qewuf"]
 
 [ext_resource type="PackedScene" uid="uid://d2u6wjiucn24q" path="res://lessons/player_3d.tscn" id="1_gm5m2"]
 [ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://assets/level/checkboard.png" id="1_w2wby"]
+[ext_resource type="PackedScene" uid="uid://cxd4jlc510w6s" path="res://lessons/projectile_3d.tscn" id="3_bqws2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t62kh"]
 albedo_color = Color(0.785641, 0.785641, 0.785641, 1)
@@ -38,3 +39,5 @@ directional_shadow_max_distance = 40.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vujrr")
+
+[node name="Projectile3D" parent="." instance=ExtResource("3_bqws2")]
