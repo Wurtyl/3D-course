@@ -1,4 +1,8 @@
-res://lessons/mobs/mob_dummy.tscn
 res://assets/vfx/ice_spikes/materials/frost_mat.tres
-res://lessons/mobs/mob_dummy.gd
+res://assets/entities/player/health_bar/test_state_machine.tscn
+res://assets/entities/player/test_state_machine.tscn
+res://lessons/mobs/mob_dummy.tscn
 res://lessons/level.tscn
+res://assets/entities/player/test_state_machine.gd
+res://lessons/mob_3d.gd
+res://lessons/ai.gd
