@@ -169,6 +169,23 @@ class StateWait extends State:
 			return Events.FINISHED
 		return Events.NONE
 
+class StateRecover extends State:
+	var duration := 0.75
+	var _time := 0.0
+
+	func _init(init_mob: Mob3D) -> void:
+		super("Recover", init_mob)
+
+	func enter() -> void:
+		mob.skin.play("idle")
+		_time = 0.0
+
+	func update(delta: float) -> Events:
+		_time += delta
+		if _time >= duration:
+			return Events.FINISHED
+		return Events.NONE
+
 class StateFireProjectile extends State:
 	var spawning_point: Node3D = null
 	var projectile_scene: PackedScene = null

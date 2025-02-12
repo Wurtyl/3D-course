@@ -7,6 +7,7 @@ func _ready() -> void:
 	var idle := AI.StateIdle.new(self)
 	var look_at_player := AI.StateLookAtPlayer.new(self)
 	var wait := AI.StateWait.new(self)
+	var recover := AI.StateRecover.new(self)
 
 	const Projectile3DScene = preload("res://assets/entities/projectile/mob_fireball.tscn")
 	var fire_projectile := AI.StateFireProjectile.new(
@@ -14,16 +15,20 @@ func _ready() -> void:
 
 	state_machine.transitions = {
 		idle:{
-			AI.Events.PLAYER_ENTERED_LINE_OF_SIGHT: look_at_player,},
+			AI.Events.PLAYER_ENTERED_LINE_OF_SIGHT: look_at_player,
+			},
 		look_at_player: {
 			AI.Events.FINISHED: wait,
 			AI.Events.PLAYER_EXITED_LINE_OF_SIGHT: idle
 			},
 		wait:{
 			AI.Events.FINISHED: fire_projectile,
-		},
+			},
 		fire_projectile:{
+			AI.Events.FINISHED: recover,
+			},
+		recover:{
 			AI.Events.FINISHED: look_at_player,
-		},
-	}
+			},
+		}
 	state_machine.activate(idle)
