@@ -3,32 +3,34 @@ class_name AI extends RefCounted
 enum Events {
 	NONE,
 	FINISHED,
+	PLAYER_ENTERED_LINE_OF_SIGHT,
+	PLAYER_EXITED_LINE_OF_SIGHT,
 }
 
 class State extends RefCounted:
-	
+
 	signal finished
 	var name := "State"
 	var mob: Mob3D = null
-	
+
 	func _init(init_name: String, init_mob: Mob3D) -> void:
 		name = init_name
 		mob = init_mob
-	
+
 	func update(_delta: float) -> Events:
 		return Events.NONE
-	
+
 	func enter() -> void:
 		pass
-	
+
 	func exit() -> void:
 		pass
 
 class StateMachine extends Node:
-	
+
 	var transitions := {}: set = set_transitions
 	var current_state: State
-	
+
 	func set_transitions(new_transitions: Dictionary) -> void:
 		transitions = new_transitions
 		if OS.is_debug_build():
@@ -50,10 +52,10 @@ class StateMachine extends Node:
 						"Expected a State object, but got " +
 						str(transitions[state][event])
 						)
-	
+
 	func _ready() -> void:
 		set_physics_process(false)
-	
+
 	func activate(initial_state: State = null) -> void:
 		if initial_state != null:
 			current_state = initial_state
@@ -84,14 +86,14 @@ class StateMachine extends Node:
 			return
 		var next_state = transitions[current_state][event]
 		_transition(next_state)
-	
+
 	func _transition(new_state: State) -> void:
 		current_state.exit()
 		current_state.finished.disconnect(_on_state_finished)
 		current_state = new_state
 		current_state.finished.connect(_on_state_finished.bind(current_state))
 		current_state.enter()
-	
+
 	func _on_state_finished(finished_state: State) -> void:
 		assert(
 			Events.FINISHED in transitions[current_state],
@@ -102,3 +104,86 @@ class StateMachine extends Node:
 
 class Blackboard extends RefCounted:
 	static var player_global_position := Vector3.ZERO
+
+class StateIdle extends State:
+	func _init(init_mob: Mob3D) -> void:
+		super("Idle", init_mob)
+
+	func enter() -> void:
+		mob.skin.play("idle")
+
+	func update(_delta: float) -> Events:
+		var distance := mob.global_position.distance_to(Blackboard.player_global_position)
+		if distance > mob.vision_range:
+			return Events.NONE
+
+		var cos_max_angle_of_vision := cos(mob.vision_angle)
+		var direction := mob.global_position.direction_to(Blackboard.player_global_position)
+		var dot := mob.global_basis.z.dot(direction)
+
+		var player_in_vision_cone := dot > cos_max_angle_of_vision
+		if player_in_vision_cone:
+			return Events.PLAYER_ENTERED_LINE_OF_SIGHT
+		return Events.NONE
+
+class StateLookAtPlayer extends State:
+	func enter() -> void:
+		_time = 0.0
+
+	func _init(init_mob: Mob3D) -> void:
+		super("Look At Player", init_mob)
+	var duration := 2.0
+	var _time := 0.0
+	func update(delta: float) -> Events:
+		_time += delta
+		if _time >= duration:
+			return Events.FINISHED
+
+		var player_distance := mob.global_position.distance_to(
+			Blackboard.player_global_position)
+		if player_distance > mob.vision_range:
+			return Events.PLAYER_EXITED_LINE_OF_SIGHT
+
+		var direction := mob.global_position.direction_to(
+			Blackboard.player_global_position)
+		var target_rotation_y := Vector3.FORWARD.signed_angle_to(
+			direction, Vector3.UP) + PI
+		mob.rotation.y = lerp_angle(
+			mob.rotation.y, target_rotation_y, 2.0 * delta)
+		return Events.NONE
+
+class StateWait extends State:
+	var duration := 0.5
+	var _time := 0.0
+
+	func _init(init_mob: Mob3D) -> void:
+		super("Wait", init_mob)
+
+	func enter() -> void:
+		mob.skin.play("idle")
+		_time = 0.0
+
+	func update(delta: float) -> Events:
+		_time += delta
+		if _time >= duration:
+			return Events.FINISHED
+		return Events.NONE
+
+class StateFireProjectile extends State:
+	var spawning_point: Node3D = null
+	var projectile_scene: PackedScene = null
+
+	func _init(
+		init_mob: Mob3D,
+		init_spawning_point: Node3D,
+		init_projectile_scene: PackedScene) -> void:
+		super("Fire Projectile", init_mob)
+		spawning_point = init_spawning_point
+		projectile_scene = init_projectile_scene
+
+	func enter() -> void:
+		var projectile: Projectile3D = projectile_scene.instantiate()
+		mob.add_sibling(projectile)
+		projectile.global_position = spawning_point.global_position
+		projectile.look_at(spawning_point.global_position + spawning_point.global_basis.z)
+		finished.emit()
