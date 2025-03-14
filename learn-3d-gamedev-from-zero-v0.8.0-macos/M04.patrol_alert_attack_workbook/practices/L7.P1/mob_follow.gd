@@ -8,8 +8,16 @@ func _ready() -> void:
 	add_child(state_machine)
 
 	var idle := StateIdle.new(self)
+	var follow := StateFollow.new(self)
+	follow.follow_speed = 2.0
 
 	state_machine.transitions = {
+		idle: {
+			Events.PLAYER_ENTERED_LINE_OF_SIGHT: follow
+		},
+		follow: {
+			Events.PLAYER_EXITED_LINE_OF_SIGHT: idle
+		},
 	}
 
 	state_machine.activate(idle)
@@ -54,10 +62,21 @@ class StateFollow extends State:
 		pass
 
 	func update(delta: float) -> Events:
-		# Steer towards the ball using the "follow" steering behavior.
-		# Use Vector3.move_toward() to steer the current velocity toward the desired velocity.
+		var ball_position := Blackboard.ball_global_position
+		var direction := mob.global_position.direction_to(ball_position)
+		var desired_velocity := (
+			direction * follow_speed
+		)
+		var velocity_distance := mob.velocity.distance_to(desired_velocity)
+		mob.velocity = mob.velocity.move_toward(
+			desired_velocity,
+			velocity_distance * drag_factor * delta
+		)
+		mob.move_and_slide()
+		mob.rotation.y = (
+			Vector3.FORWARD.signed_angle_to(direction, Vector3.UP) + PI
+		)
 		return Events.NONE
-
 
 
 
