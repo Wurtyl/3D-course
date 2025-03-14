@@ -53,7 +53,7 @@ func _physics_process(_delta: float) -> void:
 
 ## Clamps the fire rate and sets the weapon's cooldown timer wait time based on the fire rate.
 func set_fire_rate(value: float) -> void:
-	fire_rate = clamp(value, 0.1, 20.0)
+	fire_rate = clamp(value, 0.5, 20.0)
 	if _timer == null:
 		return
 	_timer.wait_time = 1.0 / fire_rate

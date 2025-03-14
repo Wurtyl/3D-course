@@ -44,10 +44,13 @@ class StateIdle extends State:
 
 class StateFollow extends State:
 
-	var follow_speed := 0.0
+	var follow_speed := 2.0
 	var drag_factor := 10.0
 
 	func _init(init_mob: CharacterBody3D) -> void:
+		super("Follow", init_mob)
+
+	func enter() -> void:
 		pass
 
 	func update(delta: float) -> Events:

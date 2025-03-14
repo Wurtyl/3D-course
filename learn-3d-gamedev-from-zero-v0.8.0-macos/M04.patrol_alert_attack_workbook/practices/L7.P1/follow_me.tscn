@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://dx8s88l1udsvf"]
 
-[ext_resource type="Texture2D" path="res://assets/level/checkboard.png" id="1_vxx7v"]
+[ext_resource type="Texture2D" uid="uid://brbtohct73mlt" path="res://assets/level/checkboard.png" id="1_vxx7v"]
 [ext_resource type="PackedScene" path="res://practices/L7.P1/mob_follow.tscn" id="2_7o0eh"]
-[ext_resource type="Script" path="res://practices/L7.P1/mob_follow.gd" id="3_pubn5"]
 [ext_resource type="PackedScene" path="res://practices/L7.P1/ball.tscn" id="4_6seac"]
-[ext_resource type="Script" path="res://practices/L7.P1/ball.gd" id="5_822g1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krn5u"]
 albedo_color = Color(0.439062, 0.439062, 0.439062, 1)
@@ -55,12 +53,8 @@ directional_shadow_max_distance = 40.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jrbi8")
 
-[node name="MobFollow" type="CharacterBody3D" parent="." instance=ExtResource("2_7o0eh")]
+[node name="MobFollow" parent="." instance=ExtResource("2_7o0eh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-script = ExtResource("3_pubn5")
-vision_range = 5.0
-vision_angle = 1.0472
 
-[node name="Ball" type="Node3D" parent="." instance=ExtResource("4_6seac")]
+[node name="Ball" parent="." instance=ExtResource("4_6seac")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("5_822g1")

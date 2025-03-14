@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://byyhc8pincwma"]
+
+[ext_resource type="PackedScene" uid="uid://482rxnrhe64v" path="res://assets/skins/bee_bot/bee_bot_skin_3d.tscn" id="1_2y81b"]
+[ext_resource type="Script" path="res://lessons/mobs/mob_bee.gd" id="1_rr4io"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b7cxn"]
+height = 3.53306
+
+[node name="MobBee" type="CharacterBody3D" node_paths=PackedStringArray("skin", "debug_label")]
+script = ExtResource("1_rr4io")
+skin = NodePath("BeeBotSkin3D2")
+debug_label = NodePath("Label3D")
+
+[node name="BeeBotSkin3D2" parent="." instance=ExtResource("1_2y81b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90568, 0)
+shape = SubResource("CylinderShape3D_b7cxn")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99045, 0.285217)
+billboard = 1
+text = "Test"
+font_size = 96
+outline_size = 24
