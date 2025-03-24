@@ -65,3 +65,5 @@ far = 100.0
 
 [node name="MobBee" parent="." instance=ExtResource("5_x2j28")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0116417, -5.58874)
+vision_range = null
+vision_angle = null

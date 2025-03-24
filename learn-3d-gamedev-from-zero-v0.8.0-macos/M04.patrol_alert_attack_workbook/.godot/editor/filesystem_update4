@@ -1,14 +1,9 @@
-res://lessons/level.tscn
+res://lessons/mobs/mob_bee.tscn
+res://addons/gdpractice/assets/theme.tres
 res://assets/vfx/ice_spikes/materials/frost_mat.tres
 res://assets/skins/bee_bot/materials/bee_bot_lights_mat.tres
 res://assets/skins/bee_bot/materials/bee_bot_eyes_mat.tres
 res://assets/skins/bee_bot/materials/bee_bot_wings_mat.tres
-res://lessons/mob_3d.gd
 res://lessons/ai.gd
 res://lessons/mobs/mob_bee.gd
-res://lessons/mobs/mob_bee.tscn
-res://addons/gdpractice/assets/theme.tres
-res://practices/L6.P1/fire.tscn
-res://practices/L3.P1/the_turret.tscn
-res://practices/L7.P1/follow_me.tscn
-res://practices/L7.P1/mob_follow.gd
+res://lessons/level.tscn

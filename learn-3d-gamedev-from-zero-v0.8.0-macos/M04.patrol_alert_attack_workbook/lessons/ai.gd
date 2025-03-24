@@ -5,7 +5,7 @@ enum Events {
 	FINISHED,
 	PLAYER_ENTERED_LINE_OF_SIGHT,
 	PLAYER_EXITED_LINE_OF_SIGHT,
-	PlAYER_ENTERED_ATTACK_RANGE,
+	PLAYER_ENTERED_ATTACK_RANGE,
 }
 
 class State extends RefCounted:
@@ -249,7 +249,36 @@ class StateChase extends State:
 			)
 		var distance := mob.global_position.distance_to(player_position)
 		if distance < attack_range:
-			return Events.PlAYER_ENTERED_ATTACK_RANGE
+			return Events.PLAYER_ENTERED_ATTACK_RANGE
 		elif distance > mob.vision_range:
 			return Events.PLAYER_EXITED_LINE_OF_SIGHT
+		return Events.NONE
+
+class StateCharge extends State:
+
+	var charge_speed = 10.0
+	var charge_distance = 7.0
+	var _traveled_distance = 0.0
+
+	func _init(init_mob: Mob3D) -> void:
+		super("Charge", init_mob)
+
+	func enter() -> void:
+		_traveled_distance = 0.0
+		mob.skin.play("charge")
+	
+	func exit() -> void:
+		mob.velocity = Vector3.ZERO
+	
+	func update(delta: float) -> Events:
+		mob.velocity = mob.goal_basis.z * charge_speed
+		mob.move_and_slide()
+		
+		if mob.get_slide_collision_count() > 0:
+			return Events.FINISHED
+		
+		_traveled_distance += charge_speed * delta
+		if _traveled_distance >= charge_distance:
+			return Events.FINISHED
+		
 		return Events.NONE
